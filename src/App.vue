@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-view/>
   </div>
 </template>
@@ -10,14 +9,17 @@ export default {
   name: 'App',
 };
 </script>
+<style lang="less">
+  [class^="el-icon-fa"], [class*=" el-icon-fa"] {
+    font-family: "FontAwesome" !important;
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url("../node_modules/font-awesome/less/font-awesome");
+  @fa-css-prefix: el-icon-fa;
+  @import url("../node_modules/element-ui/lib/theme-chalk/index.css");
 </style>
