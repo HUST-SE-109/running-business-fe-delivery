@@ -13,8 +13,15 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "element-ui": "^2.3.9",
+    "font-awesome": "^4.7.0",
+    "js-cookie": "^2.2.0",
+    "normalize.css": "^8.0.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-baidu-map": "^0.21.10",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -46,6 +53,8 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
