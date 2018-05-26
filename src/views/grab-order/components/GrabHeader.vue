@@ -68,6 +68,7 @@ export default {
         keyword: this.keyword,
         longitude: this.longitude,
         latitude: this.latitude,
+        size: 10,
       };
       // 触发 GrabOrder 组件事件
       this.$emit('get-params', params);

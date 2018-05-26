@@ -30,6 +30,11 @@ export default {
     };
   },
   methods: {
+    /**
+     * 获取配送员可抢单列表
+     *
+     * @Object params 获取可抢单列表 Query
+     */
     fetchData(params) {
       fetchCanGrabOrders(params)
         .then(({ data: { code, data } }) => {
@@ -39,12 +44,26 @@ export default {
           }
         });
     },
+    /**
+     * 处理 Header 组件搜索事件
+     *
+     * @Object params
+     */
     handleSearch(params) {
       this.params = params;
       this.fetchData(params);
     },
+    /**
+     * 分页事件处理
+     *
+     * @Number page 页数
+     */
     handleCurrentChange(page) {
-      // console.log(page);
+      const params = {
+        page,
+        ...this.params,
+      };
+      this.fetchData(params);
     },
   },
 };

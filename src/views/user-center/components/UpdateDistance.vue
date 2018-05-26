@@ -24,8 +24,7 @@
 </template>
 
 <script>
-import { getCanDeliveryDistance } from '@/api/delivery';
-import { updateCanDeliveryDistance } from '@/api/delivery';
+import { getCanDeliveryDistance, updateCanDeliveryDistance } from '@/api/delivery';
 
 export default {
   name: 'UpdateDistance',

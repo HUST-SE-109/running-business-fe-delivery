@@ -7,6 +7,10 @@
           <el-button type="text" @click="handleGrabOrder(item.orderid)">抢单</el-button>
         </div>
         <div class="order-item">
+          商品内容
+          ：{{item.goods}}
+        </div>
+        <div class="order-item">
           {{ handleAddressDesc(item.type)[0] }}
           ：{{item.sourceAddress + item.sourceRemarkAddress}}
         </div>
@@ -54,8 +58,27 @@ export default {
     },
     handleGrabOrder(id) {
       grabOrderById(id)
-        .then(({ data: { code, data } }) => {
-          console.log(code, data);
+        .then(({ data: { code, message } }) => {
+          if (code === '200') {
+            this.$message({
+              showClose: true,
+              message: '抢单成功 QwQ',
+              type: 'success',
+            });
+          } else {
+            this.$message({
+              showClose: true,
+              message,
+              type: 'info',
+            });
+          }
+        })
+        .catch(() => {
+          this.$message({
+            showClose: true,
+            message: '服务异常',
+            type: 'error',
+          });
         });
     },
   },
