@@ -1,5 +1,7 @@
 <template>
-  <h1>Home</h1>
+  <div class="home-con">
+    <h1>Home</h1>
+  </div>
 </template>
 
 <script>
@@ -8,6 +10,8 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style lang="less">
+  .home-con {
+    text-align: center;
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="footer-con">
-    <h1>Footer</h1>
+    <p>Copyright © 2018 Running Business</p>
   </div>
 </template>
 
@@ -12,6 +12,8 @@ export default {
 
 <style lang="less">
   .footer-con {
+    font-size: 14px;
     text-align: center;
+    color: #909399;
   }
 </style>

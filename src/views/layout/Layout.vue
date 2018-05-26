@@ -25,6 +25,7 @@ export default {
 
 <style lang="less">
   .el-main {
+    flex: 1;
     background-color: #E9EEF3;
     color: #333;
   }
