@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import { routers } from './route';
-import { setTitle } from '../utils/util';
-import { getToken } from '../utils/auth';
+// import { setTitle } from '../utils/util';
+// import { getToken } from '../utils/auth';
 
 
 Vue.use(Router);

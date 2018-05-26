@@ -61,6 +61,51 @@ export const appRouter = [
         name: 'order',
         component: () => import('@/views/order/Order.vue'),
       },
+      {
+        path: 'center',
+        title: '个人中心',
+        name: 'center',
+        redirect: '/center/info',
+        component: () => import('@/views/user-center/UserCenter.vue'),
+        children: [
+          {
+            path: 'info',
+            title: '个人信息',
+            name: 'info',
+            meta: {
+              title: '个人中心-个人信息',
+            },
+            component: () => import('@/views/user-center/components/UserInfo.vue'),
+          },
+          {
+            path: 'distance',
+            title: '配送距离',
+            name: 'distance',
+            meta: {
+              title: '个人中心-配送距离',
+            },
+            component: () => import('@/views/user-center/components/UpdateDistance.vue'),
+          },
+          {
+            path: 'address',
+            title: '地址管理',
+            name: 'address',
+            meta: {
+              title: '个人中心-地址管理',
+            },
+            component: () => import('@/views/user-center/components/AddressMgr.vue'),
+          },
+          {
+            path: 'password',
+            title: '修改密码',
+            name: 'password',
+            meta: {
+              title: '个人中心-修改密码',
+            },
+            component: () => import('@/views/user-center/components/UpdatePassword.vue'),
+          },
+        ],
+      },
     ],
   },
 ];

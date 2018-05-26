@@ -42,7 +42,7 @@ export default {
   },
   computed: {
     hasLogged() {
-      // if (getToken()) return true;
+      if (getToken()) return true;
       return false;
     },
   },
