@@ -13,14 +13,21 @@ const grabOrderById = id => request({
   method: 'put',
 });
 
+// 获取配送员订单列表
 const fetchDeliveryOrderList = params => request({
   url: '/order/delivery',
   method: 'get',
   params,
 });
 
+const updateOrderStatus = (status, orderId) => request({
+  url: `/delivery/modify/order/status?status=${status}&orderId=${orderId}`,
+  method: 'put',
+});
+
 export {
   fetchCanGrabOrders,
   grabOrderById,
   fetchDeliveryOrderList,
+  updateOrderStatus,
 };

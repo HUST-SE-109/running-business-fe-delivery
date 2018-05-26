@@ -24,7 +24,6 @@
 </template>
 
 <script>
-import { getCanDeliveryDistance, updateCanDeliveryDistance } from '@/api/delivery';
 
 export default {
   name: 'UpdateDistance',
@@ -41,10 +40,6 @@ export default {
     };
   },
   mounted() {
-    getCanDeliveryDistance()
-      .then(({ data: { code, data } }) => {
-        console.log(code, data);
-      });
   },
   methods: {
     fetchDiatance() {
